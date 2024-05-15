@@ -1,19 +1,4 @@
-2024-05-09 18:22:06,914 ERROR: Exception on /index [GET] [in /home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/flask/app.py:838]
-Traceback (most recent call last):
-  File "/home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/flask/app.py", line 1473, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/flask/app.py", line 882, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/flask/app.py", line 880, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/flask/app.py", line 865, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
-  File "/home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/flask_login/utils.py", line 290, in decorated_view
-    return current_app.ensure_sync(func)(*args, **kwargs)
-  File "/home/costamay/Documents/Developmentt/flask-by-miguel/flask-app/app/routes.py", line 39, in index
-    posts = current_user.following_post().all()
-AttributeError: 'User' object has no attribute 'following_post'
-2024-05-09 18:22:08,896 ERROR: Exception on /explore [GET] [in /home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/flask/app.py:838]
+2024-05-09 18:22:59,420 ERROR: Exception on /explore [GET] [in /home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/flask/app.py:838]
 Traceback (most recent call last):
   File "/home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/flask/app.py", line 1473, in wsgi_app
     response = self.full_dispatch_request()
@@ -42,7 +27,7 @@ Traceback (most recent call last):
   File "/home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/flask/templating.py", line 99, in _get_source_fast
     raise TemplateNotFound(template)
 jinja2.exceptions.TemplateNotFound: index
-2024-05-09 18:22:55,470 ERROR: Exception on /index [GET] [in /home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/flask/app.py:838]
+2024-05-09 18:23:00,791 ERROR: Exception on /index [GET] [in /home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/flask/app.py:838]
 Traceback (most recent call last):
   File "/home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/flask/app.py", line 1473, in wsgi_app
     response = self.full_dispatch_request()
@@ -57,7 +42,8 @@ Traceback (most recent call last):
   File "/home/costamay/Documents/Developmentt/flask-by-miguel/flask-app/app/routes.py", line 39, in index
     posts = current_user.following_post().all()
 AttributeError: 'User' object has no attribute 'following_post'
-2024-05-09 18:22:57,581 ERROR: Exception on /index [GET] [in /home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/flask/app.py:838]
+2024-05-09 18:23:55,356 INFO: App startup [in /home/costamay/Documents/Developmentt/flask-by-miguel/flask-app/app/__init__.py:43]
+2024-05-09 18:23:59,817 ERROR: Exception on /index [GET] [in /home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/flask/app.py:838]
 Traceback (most recent call last):
   File "/home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/flask/app.py", line 1473, in wsgi_app
     response = self.full_dispatch_request()
@@ -69,10 +55,10 @@ Traceback (most recent call last):
     return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
   File "/home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/flask_login/utils.py", line 290, in decorated_view
     return current_app.ensure_sync(func)(*args, **kwargs)
-  File "/home/costamay/Documents/Developmentt/flask-by-miguel/flask-app/app/routes.py", line 39, in index
-    posts = current_user.following_post().all()
-AttributeError: 'User' object has no attribute 'following_post'
-2024-05-09 18:22:57,799 ERROR: Exception on /index [GET] [in /home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/flask/app.py:838]
+  File "/home/costamay/Documents/Developmentt/flask-by-miguel/flask-app/app/routes.py", line 40, in index
+    return render_template('index.html', title="Home", form=form, posts=posts)
+NameError: name 'posts' is not defined
+2024-05-09 18:24:02,849 ERROR: Exception on /index [GET] [in /home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/flask/app.py:838]
 Traceback (most recent call last):
   File "/home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/flask/app.py", line 1473, in wsgi_app
     response = self.full_dispatch_request()
@@ -84,10 +70,10 @@ Traceback (most recent call last):
     return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
   File "/home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/flask_login/utils.py", line 290, in decorated_view
     return current_app.ensure_sync(func)(*args, **kwargs)
-  File "/home/costamay/Documents/Developmentt/flask-by-miguel/flask-app/app/routes.py", line 39, in index
-    posts = current_user.following_post().all()
-AttributeError: 'User' object has no attribute 'following_post'
-2024-05-09 18:22:57,977 ERROR: Exception on /index [GET] [in /home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/flask/app.py:838]
+  File "/home/costamay/Documents/Developmentt/flask-by-miguel/flask-app/app/routes.py", line 40, in index
+    return render_template('index.html', title="Home", form=form, posts=posts)
+NameError: name 'posts' is not defined
+2024-05-09 18:24:03,879 ERROR: Exception on /index [GET] [in /home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/flask/app.py:838]
 Traceback (most recent call last):
   File "/home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/flask/app.py", line 1473, in wsgi_app
     response = self.full_dispatch_request()
@@ -99,6 +85,22 @@ Traceback (most recent call last):
     return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
   File "/home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/flask_login/utils.py", line 290, in decorated_view
     return current_app.ensure_sync(func)(*args, **kwargs)
-  File "/home/costamay/Documents/Developmentt/flask-by-miguel/flask-app/app/routes.py", line 39, in index
-    posts = current_user.following_post().all()
-AttributeError: 'User' object has no attribute 'following_post'
+  File "/home/costamay/Documents/Developmentt/flask-by-miguel/flask-app/app/routes.py", line 40, in index
+    return render_template('index.html', title="Home", form=form, posts=posts)
+NameError: name 'posts' is not defined
+2024-05-09 18:24:04,130 ERROR: Exception on /index [GET] [in /home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/flask/app.py:838]
+Traceback (most recent call last):
+  File "/home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/home/costamay/Documents/Developmentt/flask-by-miguel/flask-app/app/routes.py", line 40, in index
+    return render_template('index.html', title="Home", form=form, posts=posts)
+NameError: name 'posts' is not defined
+2024-05-09 18:24:27,746 INFO: App startup [in /home/costamay/Documents/Developmentt/flask-by-miguel/flask-app/app/__init__.py:43]

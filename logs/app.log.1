@@ -1,4 +1,4 @@
-2024-05-09 22:17:10,214 ERROR: Exception on /user/susan [GET] [in /home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/flask/app.py:838]
+2024-05-09 23:37:32,159 ERROR: Exception on /index [GET] [in /home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/flask/app.py:838]
 Traceback (most recent call last):
   File "/home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/flask/app.py", line 1473, in wsgi_app
     response = self.full_dispatch_request()
@@ -10,92 +10,80 @@ Traceback (most recent call last):
     return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
   File "/home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/flask_login/utils.py", line 290, in decorated_view
     return current_app.ensure_sync(func)(*args, **kwargs)
-  File "/home/costamay/Documents/Developmentt/flask-by-miguel/flask-app/app/routes.py", line 92, in user
-    return render_template('user.html', user=user, posts=posts, form=form)
-  File "/home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/flask/templating.py", line 150, in render_template
-    return _render(app, template, context)
-  File "/home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/flask/templating.py", line 131, in _render
-    rv = template.render(context)
-  File "/home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/jinja2/environment.py", line 1301, in render
-    self.environment.handle_exception()
-  File "/home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/jinja2/environment.py", line 936, in handle_exception
+  File "/home/costamay/Documents/Developmentt/flask-by-miguel/flask-app/app/routes.py", line 29, in index
+    posts = db.paginate(current_user.following_posts(), page=page, per_page=app.config['POSTS_PER_PAGE'], error=False)
+TypeError: paginate() got an unexpected keyword argument 'error'
+2024-05-09 23:38:07,818 INFO: App startup [in /home/costamay/Documents/Developmentt/flask-by-miguel/flask-app/app/__init__.py:43]
+2024-05-10 18:04:07,133 INFO: App startup [in /home/costamay/Documents/Developmentt/flask-by-miguel/flask-app/app/__init__.py:45]
+2024-05-10 18:15:17,802 INFO: App startup [in /home/costamay/Documents/Developmentt/flask-by-miguel/flask-app/app/__init__.py:45]
+2024-05-15 14:48:51,256 INFO: App startup [in /home/costamay/Documents/Developmentt/flask-by-miguel/flask-app/app/__init__.py:45]
+2024-05-15 15:04:05,642 INFO: App startup [in /home/costamay/Documents/Developmentt/flask-by-miguel/flask-app/app/__init__.py:45]
+2024-05-15 15:11:31,060 INFO: App startup [in /home/costamay/Documents/Developmentt/flask-by-miguel/flask-app/app/__init__.py:45]
+2024-05-15 15:15:54,700 INFO: App startup [in /home/costamay/Documents/Developmentt/flask-by-miguel/flask-app/app/__init__.py:45]
+2024-05-15 15:19:42,063 ERROR: Exception on /reset_password_request [POST] [in /home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/flask/app.py:838]
+Traceback (most recent call last):
+  File "/home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/costamay/Documents/Developmentt/flask-by-miguel/flask-app/app/routes.py", line 170, in reset_password_request
+    send_password_reset_email(user)
+  File "/home/costamay/Documents/Developmentt/flask-by-miguel/flask-app/app/email.py", line 18, in send_password_reset_email
+    token = user.get_reset_pasword_token()
+AttributeError: 'User' object has no attribute 'get_reset_pasword_token'
+2024-05-15 15:22:42,962 INFO: App startup [in /home/costamay/Documents/Developmentt/flask-by-miguel/flask-app/app/__init__.py:45]
+2024-05-15 15:23:00,989 ERROR: Exception on /reset_password_request [POST] [in /home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/flask/app.py:838]
+Traceback (most recent call last):
+  File "/home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/costamay/Documents/Developmentt/flask-by-miguel/flask-app/app/routes.py", line 170, in reset_password_request
+    send_password_reset_email(user)
+  File "/home/costamay/Documents/Developmentt/flask-by-miguel/flask-app/app/email.py", line 21, in send_password_reset_email
+    send_email('[App] Reset Your Email',
+TypeError: send_email() got an unexpected keyword argument 'recepients'
+2024-05-15 15:25:39,306 INFO: App startup [in /home/costamay/Documents/Developmentt/flask-by-miguel/flask-app/app/__init__.py:45]
+2024-05-15 15:29:34,571 INFO: App startup [in /home/costamay/Documents/Developmentt/flask-by-miguel/flask-app/app/__init__.py:45]
+2024-05-15 15:52:27,803 INFO: App startup [in /home/costamay/Documents/Developmentt/flask-by-miguel/flask-app/app/__init__.py:45]
+2024-05-15 15:59:25,731 INFO: App startup [in /home/costamay/Documents/Developmentt/flask-by-miguel/flask-app/app/__init__.py:45]
+2024-05-15 16:53:16,904 INFO: App startup [in /home/costamay/Documents/Developmentt/flask-by-miguel/flask-app/app/__init__.py:45]
+2024-05-15 16:53:23,258 ERROR: Exception on /login [GET] [in /home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/flask/app.py:838]
+Traceback (most recent call last):
+  File "/home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/costamay/Documents/Developmentt/flask-by-miguel/flask-app/app/routes.py", line 55, in login
+    return render_template('login.html', title='Sign In', form=form)
+  File "/home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/flask/templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "/home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/jinja2/environment.py", line 1084, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/jinja2/environment.py", line 1013, in get_template
+    return self._load_template(name, globals)
+  File "/home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/jinja2/environment.py", line 972, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "/home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/jinja2/loaders.py", line 138, in load
+    code = environment.compile(source, name, filename)
+  File "/home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/jinja2/environment.py", line 768, in compile
+    self.handle_exception(source=source_hint)
+  File "/home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/jinja2/environment.py", line 939, in handle_exception
     raise rewrite_traceback_stack(source=source)
-  File "/home/costamay/Documents/Developmentt/flask-by-miguel/flask-app/app/templates/user.html", line 1, in top-level template code
-    {% extends "base.html" %}
-  File "/home/costamay/Documents/Developmentt/flask-by-miguel/flask-app/app/templates/base.html", line 34, in top-level template code
-    {% block content %}{% endblock %}
-  File "/home/costamay/Documents/Developmentt/flask-by-miguel/flask-app/app/templates/user.html", line 34, in block 'content'
-    {% include '_post.html' %}
-  File "/home/costamay/Documents/Developmentt/flask-by-miguel/flask-app/app/templates/_post.html", line 3, in top-level template code
-    <td><img src="{{ post.user.avatar(36) }}"></td>
-  File "/home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/jinja2/environment.py", line 485, in getattr
-    return getattr(obj, attribute)
-jinja2.exceptions.UndefinedError: 'dict object' has no attribute 'user'
-2024-05-09 22:21:33,442 INFO: App startup [in /home/costamay/Documents/Developmentt/flask-by-miguel/flask-app/app/__init__.py:43]
-2024-05-09 22:22:36,766 ERROR: Exception on /user/susan [GET] [in /home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/flask/app.py:838]
-Traceback (most recent call last):
-  File "/home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/flask/app.py", line 1473, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/flask/app.py", line 882, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/flask/app.py", line 880, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/flask/app.py", line 865, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
-  File "/home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/flask_login/utils.py", line 290, in decorated_view
-    return current_app.ensure_sync(func)(*args, **kwargs)
-  File "/home/costamay/Documents/Developmentt/flask-by-miguel/flask-app/app/routes.py", line 92, in user
-    return render_template('user.html', user=user, posts=posts, form=form)
-  File "/home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/flask/templating.py", line 150, in render_template
-    return _render(app, template, context)
-  File "/home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/flask/templating.py", line 131, in _render
-    rv = template.render(context)
-  File "/home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/jinja2/environment.py", line 1301, in render
-    self.environment.handle_exception()
-  File "/home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/jinja2/environment.py", line 936, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File "/home/costamay/Documents/Developmentt/flask-by-miguel/flask-app/app/templates/user.html", line 1, in top-level template code
-    {% extends "base.html" %}
-  File "/home/costamay/Documents/Developmentt/flask-by-miguel/flask-app/app/templates/base.html", line 34, in top-level template code
-    {% block content %}{% endblock %}
-  File "/home/costamay/Documents/Developmentt/flask-by-miguel/flask-app/app/templates/user.html", line 34, in block 'content'
-    {% include '_post.html' %}
-  File "/home/costamay/Documents/Developmentt/flask-by-miguel/flask-app/app/templates/_post.html", line 3, in top-level template code
-    <td><img src="{{ post.user.avatar(36) }}"></td>
-  File "/home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/jinja2/environment.py", line 485, in getattr
-    return getattr(obj, attribute)
-jinja2.exceptions.UndefinedError: 'dict object' has no attribute 'user'
-2024-05-09 22:25:47,578 INFO: App startup [in /home/costamay/Documents/Developmentt/flask-by-miguel/flask-app/app/__init__.py:43]
-2024-05-09 23:25:48,788 INFO: App startup [in /home/costamay/Documents/Developmentt/flask-by-miguel/flask-app/app/__init__.py:43]
-2024-05-09 23:26:00,892 ERROR: Exception on /explore [GET] [in /home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/flask/app.py:838]
-Traceback (most recent call last):
-  File "/home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/flask/app.py", line 1473, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/flask/app.py", line 882, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/flask/app.py", line 880, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/flask/app.py", line 865, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
-  File "/home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/flask_login/utils.py", line 290, in decorated_view
-    return current_app.ensure_sync(func)(*args, **kwargs)
-  File "/home/costamay/Documents/Developmentt/flask-by-miguel/flask-app/app/routes.py", line 140, in explore
-    posts = db.paginate(post_list, page, per_page=app.config['POSTS_PER_PAGE'], error_out=False)
-TypeError: paginate() takes 2 positional arguments but 3 positional arguments (and 2 keyword-only arguments) were given
-2024-05-09 23:36:38,374 INFO: App startup [in /home/costamay/Documents/Developmentt/flask-by-miguel/flask-app/app/__init__.py:43]
-2024-05-09 23:36:43,590 ERROR: Exception on /explore [GET] [in /home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/flask/app.py:838]
-Traceback (most recent call last):
-  File "/home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/flask/app.py", line 1473, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/flask/app.py", line 882, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/flask/app.py", line 880, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/flask/app.py", line 865, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
-  File "/home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/flask_login/utils.py", line 290, in decorated_view
-    return current_app.ensure_sync(func)(*args, **kwargs)
-  File "/home/costamay/Documents/Developmentt/flask-by-miguel/flask-app/app/routes.py", line 141, in explore
-    query = Post.query.order_by(Post.timestamp.desc())
-AttributeError: type object 'Post' has no attribute 'timestamp'
-2024-05-09 23:37:15,184 INFO: App startup [in /home/costamay/Documents/Developmentt/flask-by-miguel/flask-app/app/__init__.py:43]
+  File "/home/costamay/Documents/Developmentt/flask-by-miguel/flask-app/app/templates/login.html", line 1, in template
+    {% comment %} {% extends "base.html" %}
+jinja2.exceptions.TemplateSyntaxError: Encountered unknown tag 'comment'.
+2024-05-15 16:55:50,699 INFO: App startup [in /home/costamay/Documents/Developmentt/flask-by-miguel/flask-app/app/__init__.py:45]
+2024-05-15 16:55:57,123 INFO: App startup [in /home/costamay/Documents/Developmentt/flask-by-miguel/flask-app/app/__init__.py:45]
