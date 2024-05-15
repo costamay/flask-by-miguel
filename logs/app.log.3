@@ -1,0 +1,101 @@
+2024-05-09 22:01:36,410 ERROR: Exception on /index [POST] [in /home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/flask/app.py:838]
+Traceback (most recent call last):
+  File "/home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/home/costamay/Documents/Developmentt/flask-by-miguel/flask-app/app/routes.py", line 44, in index
+    return render_template('index.html', title="Home", form=form, posts=posts)
+  File "/home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/costamay/Documents/Developmentt/flask-by-miguel/flask-app/app/templates/index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/home/costamay/Documents/Developmentt/flask-by-miguel/flask-app/app/templates/base.html", line 34, in top-level template code
+    {% block content %}{% endblock %}
+  File "/home/costamay/Documents/Developmentt/flask-by-miguel/flask-app/app/templates/index.html", line 20, in block 'content'
+    {% include '_post.html' %}
+  File "/home/costamay/Documents/Developmentt/flask-by-miguel/flask-app/app/templates/_post.html", line 3, in top-level template code
+    <td><img src="{{ post.author.avatar(36) }}"></td>
+  File "/home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/jinja2/environment.py", line 485, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'app.models.Post object' has no attribute 'author'
+2024-05-09 22:02:07,781 INFO: App startup [in /home/costamay/Documents/Developmentt/flask-by-miguel/flask-app/app/__init__.py:43]
+2024-05-09 22:03:41,796 ERROR: Exception on /user/susan [GET] [in /home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/flask/app.py:838]
+Traceback (most recent call last):
+  File "/home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/home/costamay/Documents/Developmentt/flask-by-miguel/flask-app/app/routes.py", line 94, in user
+    return render_template('user.html', user=user, posts=posts, form=form)
+  File "/home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/costamay/Documents/Developmentt/flask-by-miguel/flask-app/app/templates/user.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/home/costamay/Documents/Developmentt/flask-by-miguel/flask-app/app/templates/base.html", line 34, in top-level template code
+    {% block content %}{% endblock %}
+  File "/home/costamay/Documents/Developmentt/flask-by-miguel/flask-app/app/templates/user.html", line 34, in block 'content'
+    {% include '_post.html' %}
+  File "/home/costamay/Documents/Developmentt/flask-by-miguel/flask-app/app/templates/_post.html", line 3, in top-level template code
+    <td><img src="{{ post.user.avatar(36) }}"></td>
+  File "/home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/jinja2/environment.py", line 485, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'dict object' has no attribute 'user'
+2024-05-09 22:13:20,313 INFO: App startup [in /home/costamay/Documents/Developmentt/flask-by-miguel/flask-app/app/__init__.py:43]
+2024-05-09 22:13:27,371 ERROR: Exception on /user/susan [GET] [in /home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/flask/app.py:838]
+Traceback (most recent call last):
+  File "/home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/home/costamay/Documents/Developmentt/flask-by-miguel/flask-app/app/routes.py", line 92, in user
+    return render_template('user.html', user=user, posts=posts, form=form)
+  File "/home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/costamay/Documents/Developmentt/flask-by-miguel/flask-app/app/templates/user.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/home/costamay/Documents/Developmentt/flask-by-miguel/flask-app/app/templates/base.html", line 34, in top-level template code
+    {% block content %}{% endblock %}
+  File "/home/costamay/Documents/Developmentt/flask-by-miguel/flask-app/app/templates/user.html", line 34, in block 'content'
+    {% include '_post.html' %}
+  File "/home/costamay/Documents/Developmentt/flask-by-miguel/flask-app/app/templates/_post.html", line 3, in top-level template code
+    <td><img src="{{ post.user.avatar(36) }}"></td>
+  File "/home/costamay/.local/share/virtualenvs/flask-app-VED2Ybei/lib/python3.8/site-packages/jinja2/environment.py", line 485, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'dict object' has no attribute 'user'
