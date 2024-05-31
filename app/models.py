@@ -29,7 +29,7 @@ class User(UserMixin, db.Model):
     last_seen = db.Column(db.DateTime, default=lambda: datetime.now(timezone.utc))
     created_at = db.Column(db.DateTime, default=lambda: datetime.now(timezone.utc))
     updated_at = db.Column(db.DateTime, default=lambda: datetime.now(timezone.utc))
-    
+   
     # Relationship mapping the user to related posts
     posts = db.relationship('Post', back_populates='user')
     
@@ -125,6 +125,7 @@ class Post(db.Model):
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
     created_at = db.Column(db.DateTime, default=lambda: datetime.now(timezone.utc))
     updated_at = db.Column(db.DateTime, default=lambda: datetime.now(timezone.utc))
+    language =  db.Column(db.String(5))
     
     # Relationship mapping the post to related user
     user = db.relationship('User', back_populates='posts')
